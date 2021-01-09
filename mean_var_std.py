@@ -1,6 +1,9 @@
 import numpy as np
 
 def calculate(list):
+    if len(list) != 9:
+        raise ValueError("List must contain nine numbers.")
+
     calculations = dict()
     mtrx = np.array(a).reshape(3, 3)
     calculations["mean"] = [mtrx.mean(0).tolist(), mtrx.mean(1).tolist(), mtrx.mean()]
