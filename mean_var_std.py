@@ -5,7 +5,7 @@ def calculate(list):
         raise ValueError("List must contain nine numbers.")
 
     calculations = dict()
-    mtrx = np.array(a).reshape(3, 3)
+    mtrx = np.array(list).reshape(3, 3)
     calculations["mean"] = [mtrx.mean(0).tolist(), mtrx.mean(1).tolist(), mtrx.mean()]
     calculations["variance"] = [mtrx.var(0).tolist(), mtrx.var(1).tolist(), mtrx.var()]
     calculations["standared deviation"] = [mtrx.std(0).tolist(), mtrx.std(1).tolist(), mtrx.std()]
